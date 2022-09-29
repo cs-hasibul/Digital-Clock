@@ -6,6 +6,9 @@ from tkinter.ttk import *
 # retrieve system's time
 from time import strftime
 
+# Impor json
+import json
+
 # creating tkinter window
 root = Tk()
 root.title('Digital Clock')
@@ -18,12 +21,20 @@ def time():
     lbl.config(text=string)
     lbl.after(1000, time)
 
+# Open json file with color configuration
+with open('configuration.json', 'r') as f:
+    configuration = json.load(f)
+
+# Default colors are purple for background
+# and white for foreground
+user_background = configuration['background']
+user_foreground = configuration['foreground']
 
 # Styling the label widget so that clock
 # will look more attractive
 lbl = Label(root, font=('courier', 35, 'bold'),
-            background='purple',
-            foreground='white')
+            background=user_background,
+            foreground=user_foreground)
 
 # Placing clock at the centre
 # of the tkinter window
