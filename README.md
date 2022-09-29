@@ -12,5 +12,8 @@ Digital Clock in Python using tkinter.
 
 4. Run `python main.py` from the repository's directory
 
+# Customisation
+To customise the colors open the `configuration.json` file, then replace the default colors to your colors choice (You can use hex color code).
+
 # Screenshot
 ![ScreenShot](https://user-images.githubusercontent.com/41125795/110994490-0adb8a80-83a3-11eb-90d5-afc851540092.JPG)
